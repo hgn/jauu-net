@@ -122,7 +122,7 @@ Some projects use [editorconf](https://editorconfig.org/) files to specify
 standardized formatting. In a generalized way. In order for this to be
 processed by Vim or Neovim, a plugin is necessary. The standard Plugin is
 [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim). For
-example, the following elements for example are supported: `indent_style`,
+example, the following elements are supported: `indent_style`,
 `indent_size`, `tab_width`, `end_of_line`, `charset`, `insert_final_newline`.
 
 ### Leap
