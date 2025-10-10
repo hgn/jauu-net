@@ -37,6 +37,10 @@ menu:
 #           name: Search
 #           url: search/
 #           weight: 40
+        - identifier: linux-analyse
+          name: Books
+          url: /linux-analyse/
+          weight: 40
         - identifier: tags
           name: Tags
           url: /tags/
