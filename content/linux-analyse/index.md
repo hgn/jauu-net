@@ -33,6 +33,9 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
   >
 </picture>
 
+> Apologies that this page is in German; the book is in German, so the book
+> page is as well.
+
 ---
 
 ## Kurzbeschreibung
