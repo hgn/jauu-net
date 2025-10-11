@@ -50,7 +50,7 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
     <blockquote>
       <p>„Eine sehr gute Einführung in die Grundlagen der Performance- und Systemanalyse sowie in alle gängigen Werkzeuge. Dank der Verbindung praxisrelevanter Hardwareeigenschaften mit Anwendungsbeispielen aus verschiedensten Kernel-Subsystemen ist das Werk auch als Nachschlagewerk unverzichtbar.“</p>
     </blockquote>
-    <figcaption>— Florian Westphal; Netfilter Maintainer</figcaption>
+    <figcaption>— Florian Westphal; Firewall Maintainer</figcaption>
   </figure>
 </section>
 
@@ -121,8 +121,16 @@ Reliability-Ingenieure, SRE/DevOps, Embedded-Linux-Teams, Studierende.
 
 ## Leseprobe & ToC
 
-- **Beispielkapitel (PDF):** [/downloads/linux-analyse/flepa-book-toc.pdf](/downloads/linux-analyse/flepa-book-toc.pdf)  
-- **Inhaltsverzeichnis (PDF):** [/downloads/linux-analyse/flepa-book-toc.pdf](/downloads/linux-analyse/flepa-book-toc.pdf)  
+<img
+  src="/images/flepa-book-landscape.jpg"
+  alt="Buchansicht »Linux-Systemanalyse« im Querformat"
+  loading="lazy"
+  decoding="async"
+  style="max-width:100%;height:auto;border-radius:12px"
+/>
+
+- **Beispielkapitel "Zeit und Timer" (PDF):** [flepa-book-timer.pdf](/downloads/linux-analyse/flepa-book-timer.pdf)  
+- **Inhaltsverzeichnis (PDF):** [flepa-book-toc.pdf](/downloads/linux-analyse/flepa-book-toc.pdf)  
 
 **Inhaltsüberblick (Auszug):**
 
@@ -140,9 +148,9 @@ Fehler gefunden oder Verbesserungsvorschläge?
 - Bitte Seite, Abschnitt/Zeilennummer und kurze Beschreibung angeben.  
 - Der öffentliche Errata-Stand wird hier fortlaufend gepflegt.
 
-| ID | Kapitel / Seite | Fehler (kurz) | Status | Fixed in | Datum | Reporter |
+| ID | Kapitel / Seite | Fehler (kurz) | Fixed in | Datum | Reporter |
 |----|------------------|---------------|--------|----------|--------|----------|
-| EA-YYYY-NNN | – | – | gemeldet | — | YYYY-MM-DD | N.N. |
+| EA-YYYY-NNN | – | – | — | YYYY-MM-DD | N.N. |
 
 *Stand: wird fortlaufend aktualisiert.*
 
@@ -150,17 +158,17 @@ Fehler gefunden oder Verbesserungsvorschläge?
 
 ## Bibliografische Angaben
 
-**Autor:** Hagen Paul Pfeifer  
-**Titel:** Linux-Systemanalyse — Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen  
-**Auflage/Ort/Jahr:** 1. Auflage, München – 2025  
-**ISBN:** 978-3-8192-1292-5  
+**Autor:** Hagen Paul Pfeifer<br />
+**Titel:** Linux-Systemanalyse<br />
+**Subtitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen<br />
+**Seiten:** 862<br />
+**Auflage/Ort/Jahr:** 1. Auflage, München – 2025<br />
+**ISBN:** 978-3-8192-1292-5<br />
+**Copyright:** © 2022 – 2025 Hagen Paul Pfeifer<br /><br />
 
-**Copyright:** © 2022 – 2025 Hagen Paul Pfeifer  
-**Version:** 2025-09-28
-
-**Verlag:** BoD – Books on Demand GmbH, In de Tarpen 42, 22848 Norderstedt, <a href="mailto:bod@bod.de">bod@bod.de</a>  
-**Lektorat:** Roberta Martin, Berlin  
-**Druck:** Libri Plureos GmbH, Friedensallee 273, 22763 Hamburg
+**Lektorat:** Roberta Martin, Berlin <br /> 
+**Verlag:** BoD – Books on Demand GmbH, Überseering 33, 22297 Hamburg<br />
+**Druck:** Libri Plureos GmbH, Friedensallee 273, 22763 Hamburg<br /><br />
 
 **Deutsche Nationalbibliothek:** Die DNB verzeichnet diese Publikation in der Deutschen Nationalbibliografie; bibliografische Daten: <a href="https://dnb.dnb.de">https://dnb.dnb.de</a>.
 
