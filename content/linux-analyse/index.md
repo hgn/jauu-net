@@ -33,8 +33,63 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
   >
 </picture>
 
+<!--
 > Apologies that this page is in German; the book is in German, so the book
 > page is as well.
+-->
+
+<section class="reviews" aria-label="Rezensionen">
+  <figure class="review">
+    <blockquote>
+      <p>„Hagens umfassendes Kompendium verbindet Kernelverständnis mit praktischem Toolwissen – klar strukturiert und praxisnah. Ein Muss für jeden Entwickler!“</p>
+    </blockquote>
+    <figcaption>— Daniel Borkmann; BPF Maintainer</figcaption>
+  </figure>
+
+  <figure class="review">
+    <blockquote>
+      <p>„Eine sehr gute Einführung in die Grundlagen der Performance- und Systemanalyse sowie in alle gängigen Werkzeuge. Dank der Verbindung praxisrelevanter Hardwareeigenschaften mit Anwendungsbeispielen aus verschiedensten Kernel-Subsystemen ist das Werk auch als Nachschlagewerk unverzichtbar.“</p>
+    </blockquote>
+    <figcaption>— Florian Westphal; Netfilter Maintainer</figcaption>
+  </figure>
+</section>
+
+<style>
+/* Zwei Spalten à 50 % des Inhaltsbereichs */
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50/50 */
+  gap: 1.5rem;
+  margin: 1.25rem 0 2rem;
+}
+.review {
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  background: rgba(0,0,0,0.02);
+}
+.review blockquote {
+  margin: 0 0 .75rem 0;
+  font-style: italic;
+}
+.review figcaption {
+  font-size: .95rem;
+  opacity: .85;
+}
+
+/* Dark-Mode-Optik verbessern, falls vorhanden */
+@media (prefers-color-scheme: dark) {
+  .review {
+    border-color: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.03);
+  }
+}
+
+/* Mobil: einspaltig */
+@media (max-width: 820px) {
+  .reviews { grid-template-columns: 1fr; }
+}
+</style>
 
 ---
 
@@ -130,14 +185,14 @@ BibTeX:
 
 ```
 @book{Pfeifer2025LinuxAnalyse,
-  author = {Hagen Paul Pfeifer},
-  title     = {Linux-Systemanalyse},
-  subtitle  = {Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen},
-  year = {2025},
-  isbn = {978-3-8192-1292-5},
-  address = {München},
-  publisher = {BoD -- Books on Demand},
-  url = {https://jauu.net/linux-analyse/}
+ author = {Hagen Paul Pfeifer},
+ title = {Linux-Systemanalyse},
+ subtitle = {Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen},
+ year = {2025},
+ isbn = {978-3-8192-1292-5},
+ address = {München},
+ publisher = {Books on Demand},
+ url = {https://jauu.net/linux-analyse/}
 }
 ```
 
