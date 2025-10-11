@@ -27,8 +27,7 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
   <img
     src="/images/hgn-book-anim.gif"
     alt="Animation des Buchs »Linux-Systemanalyse«"
-    loading="lazy"
-    decoding="async"
+    fetchpriority="high"
     style="max-width:100%;height:auto;border-radius:12px"
   >
 </picture>
