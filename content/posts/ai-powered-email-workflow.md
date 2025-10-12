@@ -27,6 +27,12 @@ OfflineIMAP–NeoMutt–Notmuch setup.
 # Email Base Setup
 
 To understand my AI setup, let’s first look at my baseline email stack. It
+deviates a bit from the "standard Gmail" web GUI setup: it’s more CLI-focused,
+supports sending automated emails, includes cross-provider backups, and is
+optimized for handling very high mail volumes. It consists of the following
+components:
+
+To understand my AI setup, let’s first look at my baseline email stack. It
 consists of the following components:
 
 - **NeoMutt** as my MUA (Mail User Agent)
