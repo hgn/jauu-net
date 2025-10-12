@@ -147,9 +147,9 @@ Fehler gefunden oder Verbesserungsvorschläge?
 - Bitte Seite, Abschnitt/Zeilennummer und kurze Beschreibung angeben.  
 - Der öffentliche Errata-Stand wird hier fortlaufend gepflegt.
 
-| ID | Kapitel / Seite | Fehler (kurz) | Fixed in | Datum | Reporter |
+| ID | Seite | Fehler (kurz) | Fixed in | Datum | Reporter |
 |----|------------------|---------------|--------|----------|--------|----------|
-| EA-YYYY-NNN | – | – | — | YYYY-MM-DD | N.N. |
+| YYYY-NNN | – | – | — | YYYY-MM-DD | N.N. |
 
 *Stand: wird fortlaufend aktualisiert.*
 
@@ -192,14 +192,14 @@ BibTeX:
 
 ```
 @book{Pfeifer2025LinuxAnalyse,
- author = {Hagen Paul Pfeifer},
- title = {Linux-Systemanalyse},
- subtitle = {Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen},
- year = {2025},
- isbn = {978-3-8192-1292-5},
- address = {München},
- publisher = {Books on Demand},
- url = {https://jauu.net/linux-analyse/}
+  author = {Hagen Paul Pfeifer},
+  title = {Linux-Systemanalyse},
+  subtitle = {Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen},
+  year = {2025},
+  isbn = {978-3-8192-1292-5},
+  address = {München},
+  publisher = {Books on Demand},
+  url = {https://jauu.net/linux-analyse/}
 }
 ```
 
