@@ -90,6 +90,51 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
 }
 </style>
 
+<section class="buybox-simple" aria-label="Jetzt kaufen">
+  <h2>Jetzt kaufen</h2>
+  <ul class="buybox-list">
+    <li><a href="AMAZON_URL" target="_blank" rel="noopener">Bei Amazon</a></li>
+    <li><a href="BOD_URL" target="_blank" rel="noopener">Direkt bei BoD</a></li>
+    <li><a href="https://www.buchhandel.de/buch/9783819212925" target="_blank" rel="noopener">Im Buchhandel (per ISBN)</a></li>
+  </ul>
+</section>
+
+<style>
+/* Schlichte Box – angelehnt an deine Review-Karten */
+.buybox-simple {
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  background: rgba(0,0,0,0.02);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.buybox-simple h2 {
+  margin: .1rem 0 .6rem 0;
+  font-size: 1.15rem;
+}
+
+.buybox-list {
+  margin: 0;
+  padding-left: 1.2rem; /* klassische Bullet-Liste */
+}
+
+.buybox-list li {
+  margin: .35rem 0;
+}
+
+/* Dark Mode wie bei den Reviews */
+@media (prefers-color-scheme: dark) {
+  .buybox-simple {
+    border-color: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.03);
+  }
+}
+</style>
+
+
+
+
 ---
 
 ## Kurzbeschreibung
@@ -143,7 +188,7 @@ Reliability-Ingenieure, SRE/DevOps, Embedded-Linux-Teams, Studierende.
 ## Errata & Feedback
 
 Fehler gefunden oder Verbesserungsvorschläge?
-- **Errata per Mail:** <a href="mailto:hagen@jauu.net">hagen@jauu.net</a>  
+- **Errata per Mail:** [hagen@jauu.net](mailto:hagen@jauu.net?subject=%5BLinux-Systemanalyse%5D%20Errata&body=Seite:%20%0D%0AKapitel/Abschnitt:%20%0D%0ABeschreibung:%20%0D%0AVorschlag%20zur%20Korrektur:%20)
 - Bitte Seite, Abschnitt/Zeilennummer und kurze Beschreibung angeben.  
 - Der öffentliche Errata-Stand wird hier fortlaufend gepflegt.
 
@@ -160,7 +205,7 @@ Fehler gefunden oder Verbesserungsvorschläge?
 **Autor:** Hagen Paul Pfeifer<br />
 **Titel:** Linux-Systemanalyse<br />
 **Subtitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen<br />
-**Seiten:** 862<br />
+**Seiten:** 864<br />
 **Auflage/Ort/Jahr:** 1. Auflage, München – 2025<br />
 **ISBN:** 978-3-8192-1292-5<br />
 **Copyright:** © 2022 – 2025 Hagen Paul Pfeifer<br /><br />
@@ -170,6 +215,18 @@ Fehler gefunden oder Verbesserungsvorschläge?
 **Druck:** Libri Plureos GmbH, Friedensallee 273, 22763 Hamburg<br /><br />
 
 **Deutsche Nationalbibliothek:** Die DNB verzeichnet diese Publikation in der Deutschen Nationalbibliografie; bibliografische Daten: <a href="https://dnb.dnb.de">https://dnb.dnb.de</a>.
+
+### Ausstattung 978-3-8192-1292-5 (Hardcover Version)
+
+| Merkmal                 | Wert                |
+|-------------------------|---------------------|
+| Seitenzahl              | **864**             |
+| Format                  | **15,5 × 22 cm**    |
+| Einband                 | **Hardcover**       |
+| Laminierung             | **Matt**            |
+| Papier                  | **Weiß 90 g**       |
+| Buchrücken              | **Gerundeter Rücken** |
+| Bindung                 | **Fadenbindung**    |
 
 ---
 
@@ -188,7 +245,7 @@ den gesetzlichen Bestimmungen.
 
 ## Zitieren
 
-BibTeX:
+<strong>BibTeX</strong>
 
 ```
 @book{Pfeifer2025LinuxAnalyse,
@@ -203,6 +260,29 @@ BibTeX:
 }
 ```
 
+<strong>IEEE</strong>
+
+```
+H. P. Pfeifer, Linux-Systemanalyse: Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen. Hamburg, Germany: Books on Demand, 2025. ISBN 978-3-8192-1292-5.
+```
+
+RIS (EndNote/RefMan)
+<strong>RIS (EndNote/RefMan)</strong>
+
+
+```
+TY  - BOOK
+AU  - Pfeifer, Hagen Paul
+TI  - Linux-Systemanalyse: Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen
+PY  - 2025
+SN  - 978-3-8192-1292-5
+PB  - Books on Demand
+CY  - Hamburg
+UR  - https://jauu.net/linux-analyse/
+ER  -
+```
+
+
 
 ---
 
@@ -216,3 +296,36 @@ Homepage: <a href="https://jauu.net/linux-analyse/">https://jauu.net/linux-analy
 ## Bewertung
 
 Wenn Ihnen das Buch gefällt, freue ich mich über eine Rezension (z. B. bei Amazon) oder eine Rückmeldung per E-Mail.
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Linux-Systemanalyse",
+  "alternateName": "Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen",
+  "author": { "@type": "Person", "name": "Hagen Paul Pfeifer" },
+  "isbn": "978-3-8192-1292-5",
+  "inLanguage": "de",
+  "bookFormat": "https://schema.org/Hardcover",
+  "numberOfPages": 864,
+  "datePublished": "2025",
+  "publisher": { "@type": "Organization", "name": "Books on Demand" },
+  "image": "https://jauu.net/static/images/hgn-book-anim.webp",
+  "url": "https://jauu.net/linux-analyse/",
+  "offers": {
+    "@type": "Offer",
+    "url": "BOD_ODER_AMAZON_URL",
+    "priceCurrency": "EUR",
+    "price": "64.99",
+    "availability": "https://schema.org/InStock"
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Format", "value": "15,5 × 22 cm" },
+    { "@type": "PropertyValue", "name": "Papier", "value": "Weiß 90 g" },
+    { "@type": "PropertyValue", "name": "Bindung", "value": "Fadenbindung" },
+    { "@type": "PropertyValue", "name": "Laminierung", "value": "Matt" },
+    { "@type": "PropertyValue", "name": "Buchrücken", "value": "Gerundeter Rücken" }
+  ]
+}
+</script>
