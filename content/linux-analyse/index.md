@@ -283,7 +283,6 @@ den gesetzlichen Bestimmungen.
 H. P. Pfeifer, Linux-Systemanalyse: Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen. Hamburg, Germany: Books on Demand, 2025. ISBN 978-3-8192-1292-5.
 ```
 
-RIS (EndNote/RefMan)
 <strong>RIS (EndNote/RefMan)</strong>
 
 
