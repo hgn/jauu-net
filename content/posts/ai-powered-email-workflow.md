@@ -46,8 +46,11 @@ I use NeoMutt in two modes:
 - `mutt` in an online IMAP mode  
 - `mutt-offline` in an offline mode that works directly on my `~/.mail` Maildir  
 
+[![mutt-screenshot](/images/mutt-screenshot-perf.png)](/images/mutt-screenshot-perf.png)
+
 Emails are always sent via SMTP. If messages are deleted locally in offline
 mode, the deletion is later synced back to the IMAP server.
+
 
 
 ## OfflineIMAP
