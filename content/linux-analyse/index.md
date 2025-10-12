@@ -146,7 +146,7 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
 Linux-Systeme mit einer reproduzierbaren Methodik. Ausgangspunkt sind reale
 Symptome – von CPU-Lastspitzen, I/O-Einbrüchen und sporadischen Paketverlusten
 über unerklärlich viele TLB-/LLC-Misses, Branch-Mispredictions,
-Lock-Contention, Priority-Inversionen und Scheduler-Anomalien bis hin zu
+Thread-Lock-Contention, Priority-Inversionen und Scheduler-Anomalien bis hin zu
 seltenen, aber außerhalb der Norm liegenden Echtzeitlatenzen oder erhöhtem
 Energieverbrauch. Das Buch zeigt, wie du Hypothesen sauber formulierst,
 Messungen kontrolliert aufsetzt, Baselines definierst und Ursachen belastbar
@@ -154,13 +154,13 @@ verifizierst – mit Werkzeugen wie <em>perf</em>, <em>ftrace</em>,
 <em>eBPF</em>, Tracepoints sowie System-Tracern (z. B. Intel PT, ARM CoreSight,
 Perfetto/Trace Compass) – und daraus zielgerichtete Optimierungen ableitest.
 
-Typische Use Cases: NUMA-Imbalance und Cache-Interferenzen identifizieren,
+Weitere Use Cases: NUMA-Imbalance und Cache-Interferenzen identifizieren,
 Syscalls und Filesystem-Hotspots quantifizieren, IRQ-Storms und
 Timer-Streueffekte einkreisen, C-/P-State-Wechsel und Thermal-Throttling
 sichtbar machen, Garbage-Collector-Pauses und Memory-Fragmentierung bewerten,
 cgroup-Limits und CPU-Affinity präzise justieren, Regressionsanalysen nach
-Kernel-/Compiler-Updates durchführen und Fixes dauerhaft absichern – stets
-entlang eines klaren Vorgehensmodells für Messen, Verifizieren und Optimieren.
+Kernel-/Compiler-Updates durchführen und Fixes dauerhaft absichern und vieles
+weitere mehr.
 
 **Untertitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen
 
