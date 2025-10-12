@@ -90,13 +90,16 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
 }
 </style>
 
-<section class="buybox-simple" aria-label="Jetzt kaufen">
+<section class="buybox-simple" aria-label="Jetzt kaufen (Hardcover Version)">
   <h2>Jetzt kaufen</h2>
   <ul class="buybox-list">
     <li><a href="AMAZON_URL" target="_blank" rel="noopener">Bei Amazon</a></li>
-    <li><a href="BOD_URL" target="_blank" rel="noopener">Direkt bei BoD</a></li>
     <li><a href="https://www.buchhandel.de/buch/9783819212925" target="_blank" rel="noopener">Im Buchhandel (per ISBN)</a></li>
+    <li><a href="BOD_URL" target="_blank" rel="noopener">Direkt bei BoD</a></li> (Kreditkarte oder PayPal, für mich am besten)
   </ul>
+  <p class="buybox-note">
+    <small class="buybox-note">Tipp: Bei BoD sind Kreditkarte und PayPal möglich – das ist für mich am besten.</small>
+  </p>
 </section>
 
 <style>
