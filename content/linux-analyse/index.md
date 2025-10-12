@@ -94,11 +94,11 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
   <h2>Jetzt kaufen</h2>
   <ul class="buybox-list">
     <li><a href="AMAZON_URL" target="_blank" rel="noopener">Bei Amazon</a></li>
-    <li><a href="https://www.buchhandel.de/buch/9783819212925" target="_blank" rel="noopener">Im Buchhandel (per ISBN)</a></li>
-    <li><a href="BOD_URL" target="_blank" rel="noopener">Direkt bei BoD</a></li> (Kreditkarte oder PayPal, für mich am besten)
+    <li><a href="https://www.buchhandel.de/buch/9783819212925" target="_blank" rel="noopener">Im Buchhandel</a></li>
+    <li><a href="BOD_URL" target="_blank" rel="noopener">Direkt bei BoD</a> (Kreditkarte und PayPal möglich)</li>
   </ul>
   <p class="buybox-note">
-    <small class="buybox-note">Tipp: Bei BoD sind Kreditkarte und PayPal möglich – das ist für mich am besten.</small>
+    <small class="buybox-note">Tipp: Direktkauf bei BoD bedeutet für mich den höchsten Autorenanteil – im Vergleich zu Amazon/Buchhandel bleibt pro Exemplar etwas mehr bei mir hängen.</small>
   </p>
 </section>
 
