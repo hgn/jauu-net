@@ -165,7 +165,8 @@ entlang eines klaren Vorgehensmodells für Messen, Verifizieren und Optimieren.
 **Untertitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen
 
 **Zielgruppen:** Software-/Systementwickler, Performance- und
-Reliability-Ingenieure, SRE/DevOps, Embedded-Linux-Teams, Studierende.
+Reliability-Ingenieure, Software-Architekten, SRE/DevOps, Kernel-Entwickler,
+Embedded-Linux-Teams, Sicherheitsforscher und natürlich Studierende.
 
 **Lernziele (Auswahl):**
 
@@ -194,10 +195,10 @@ Reliability-Ingenieure, SRE/DevOps, Embedded-Linux-Teams, Studierende.
 
 **Inhaltsüberblick (Auszug):**
 
-- Teil I – Werkzeuge: perf, eBPF, System-Tracer, Frontends  
-- Teil II – Subsysteme: CPU, Task Scheduling, Speicher, Dateisystem, Zeit/Timer, Energiemanagement  
-- Methodologie: Anforderungen, Vergleichbarkeit, Datenhaltung, Kommunikation, Integration in Entwicklungszyklen  
-- Anhänge: Benchmarking, Setups (Debian VM, Kernel-Build, Debug), Binäranalyse, Literatur, Stichwortverzeichnis
+- **Teil I** – Werkzeuge: perf, eBPF, System-Tracer, Frontends  
+- **Teil II** – Subsysteme: CPU, Task Scheduling, Speicher, Dateisystem, Zeit/Timer, Energiemanagement  
+- **Teil III** - Methodologie: Anforderungen, Vergleichbarkeit, Datenhaltung, Kommunikation, Integration in Entwicklungszyklen  
+- **Anhänge** Benchmarking, Setups (Debian VM, Kernel-Build, Debug), Binäranalyse, Literatur, Stichwortverzeichnis
 
 ---
 
