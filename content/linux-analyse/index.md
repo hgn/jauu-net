@@ -202,6 +202,48 @@ Embedded-Linux-Teams, Sicherheitsforscher und natürlich Studierende.
 
 ---
 
+## Beispielcode & Begleitmaterial
+
+Der komplette Beispielcode zum Buch liegt öffentlich auf GitHub.
+
+- Repository: **src/**  
+  https://github.com/hgn/linux-analysis/tree/master/src
+- ZIP-Download (aktueller Stand, Branch `master`):  
+  https://github.com/hgn/linux-analysis/archive/refs/heads/master.zip
+- Issues/Fragen:  
+  https://github.com/hgn/linux-analysis/issues/new
+
+### Quickstart
+
+```bash
+# 1) Klonen
+git clone https://github.com/hgn/linux-analysis.git
+cd linux-analysis/src
+
+# 2) Werkzeuge (Beispiele für Debian)
+$ sudo apt-get update
+$ sudo apt-get install -y linux-perf bpftrace clang llvm make python3 python3-venv
+
+# 3) Ein einfaches Beispiel ausführen (siehe README in src/)
+$ cd greedy-brk-alloctor/
+$ make all
+````
+
+### Voraussetzungen
+
+* **Kernel:** aktueller Distro-Kernel; eBPF-Beispiele benötigen BTF/CO-RE.
+* **Rechte:** teils `root`/`CAP_SYS_ADMIN` (perf systemweit, ftrace mount, eBPF attach).
+* **Pakete:** `linux-perf`, `bpftrace`, `clang`/`llvm`, `make`; optional Python für Auswertung.
+
+
+### Lizenz
+
+Der **Beispielcode** zum Buch ist **Public Domain**. Du darfst damit **alles**
+machen – nutzen, kopieren, verändern, weiterverbreiten, kommerziell verwenden –
+**ohne Auflagen**.
+
+---
+
 ## Errata & Feedback
 
 Fehler gefunden oder Verbesserungsvorschläge?
@@ -214,49 +256,6 @@ Fehler gefunden oder Verbesserungsvorschläge?
 | YYYY-NNN | – | – | — | YYYY-MM-DD | N.N. |
 
 *Stand: wird fortlaufend aktualisiert.*
-
----
-
-## Bibliografische Angaben
-
-**Autor:** Hagen Paul Pfeifer<br />
-**Titel:** Linux-Systemanalyse<br />
-**Subtitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen<br />
-**Seiten:** 860<br />
-**Auflage/Ort/Jahr:** 1. Auflage, München – 2025<br />
-**ISBN:** 978-3-8192-1292-5<br />
-**Copyright:** © 2022 – 2025 Hagen Paul Pfeifer<br /><br />
-
-**Lektorat:** Roberta Martin, Berlin <br /> 
-**Verlag:** BoD – Books on Demand GmbH, Überseering 33, 22297 Hamburg<br />
-**Druck:** Libri Plureos GmbH, Friedensallee 273, 22763 Hamburg<br /><br />
-
-**Deutsche Nationalbibliothek:** Die DNB verzeichnet diese Publikation in der Deutschen Nationalbibliografie; bibliografische Daten: <a href="https://dnb.dnb.de">https://dnb.dnb.de</a>.
-
-### Ausstattung 978-3-8192-1292-5 (Hardcover Version)
-
-| Merkmal                 | Wert                |
-|-------------------------|---------------------|
-| Seitenzahl              | **860**             |
-| Format                  | **15,5 × 22 cm**    |
-| Einband                 | **Hardcover**       |
-| Laminierung             | **Matt**            |
-| Papier                  | **Weiß 90 g**       |
-| Buchrücken              | **Gerundeter Rücken** |
-| Bindung                 | **Fadenbindung**    |
-
----
-
-## Rechtliche Hinweise
-
-Das Werk ist urheberrechtlich geschützt. Alle Rechte vorbehalten. Die
-Verwendung von Texten und Illustrationen – auch auszugsweise – ist ohne
-schriftliche Zustimmung des Autors unzulässig.  Die automatische Analyse des
-Werkes, um Informationen über Muster, Trends und Korrelationen gemäß §44b UrhG
-(„Text und Data Mining“) zu gewinnen, ist untersagt.  Trotz größter Sorgfalt
-kann keine Haftung für Fehler und deren Folgen übernommen werden.
-Wiedergegebene Gebrauchs- und Handelsnamen können Marken sein und unterliegen
-den gesetzlichen Bestimmungen.
 
 ---
 
@@ -312,6 +311,49 @@ Homepage: <a href="https://jauu.net/linux-analyse/">https://jauu.net/linux-analy
 ## Bewertung
 
 Wenn Ihnen das Buch gefällt, freue ich mich über eine Rezension (z. B. bei Amazon) oder eine Rückmeldung per E-Mail.
+
+---
+
+## Bibliografische Angaben
+
+**Autor:** Hagen Paul Pfeifer<br />
+**Titel:** Linux-Systemanalyse<br />
+**Subtitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen<br />
+**Seiten:** 860<br />
+**Auflage/Ort/Jahr:** 1. Auflage, München – 2025<br />
+**ISBN:** 978-3-8192-1292-5<br />
+**Copyright:** © 2022 – 2025 Hagen Paul Pfeifer<br /><br />
+
+**Lektorat:** Roberta Martin, Berlin <br /> 
+**Verlag:** BoD – Books on Demand GmbH, Überseering 33, 22297 Hamburg<br />
+**Druck:** Libri Plureos GmbH, Friedensallee 273, 22763 Hamburg<br /><br />
+
+**Deutsche Nationalbibliothek:** Die DNB verzeichnet diese Publikation in der Deutschen Nationalbibliografie; bibliografische Daten: <a href="https://dnb.dnb.de">https://dnb.dnb.de</a>.
+
+### Ausstattung 978-3-8192-1292-5 (Hardcover Version)
+
+| Merkmal                 | Wert                |
+|-------------------------|---------------------|
+| Seitenzahl              | **860**             |
+| Format                  | **15,5 × 22 cm**    |
+| Einband                 | **Hardcover**       |
+| Laminierung             | **Matt**            |
+| Papier                  | **Weiß 90 g**       |
+| Buchrücken              | **Gerundeter Rücken** |
+| Bindung                 | **Fadenbindung**    |
+
+---
+
+## Rechtliche Hinweise
+
+Das Werk ist urheberrechtlich geschützt. Alle Rechte vorbehalten. Die
+Verwendung von Texten und Illustrationen – auch auszugsweise – ist ohne
+schriftliche Zustimmung des Autors unzulässig.  Die automatische Analyse des
+Werkes, um Informationen über Muster, Trends und Korrelationen gemäß §44b UrhG
+(„Text und Data Mining“) zu gewinnen, ist untersagt.  Trotz größter Sorgfalt
+kann keine Haftung für Fehler und deren Folgen übernommen werden.
+Wiedergegebene Gebrauchs- und Handelsnamen können Marken sein und unterliegen
+den gesetzlichen Bestimmungen.
 
 
 <script type="application/ld+json">
