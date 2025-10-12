@@ -21,6 +21,11 @@ Christmas project: I got a Banana Pi F3 on the cheap and used the quiet hours to
 
 TL;DR: Octa-core 64-bit RISC-V with RVV 1.0 (256-bit), two coherent clusters, sensible caches, usable PCIe and I/O. Treat the GPU and video items as hardware capability; the Linux userspace stacks may lag.
 
+
+My Banana Pi in a 3D printed case: 
+
+[![banana-pi](/images/banana-pi-case.png)](/images/banana-pi-case.png)
+
 ## SoC and microarchitecture
 
 The F3 is an octa-core 64-bit RISC-V SoC from SpacemiT. The vendor claims about single-core speed vs Cortex-A55 are marketing-level. The concrete properties that matter:
