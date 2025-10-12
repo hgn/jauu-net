@@ -21,7 +21,9 @@ Still, I want to keep up with ongoing development. That’s why I built a
 **ChatGPT Summary Generator** that integrates nicely with my
 OfflineIMAP–NeoMutt–Notmuch setup.
 
-> Sorry for the clickbait title — it’s really just an email-to-ChatGPT fanout. ;-)
+> Sorry for the clickbait — it’s just an email-to-ChatGPT fan-out. No
+> proprietary Google/Microsoft stuff involved. For extra privacy, point it at
+> your local Ollama setup.
 
 
 # Email Base Setup
