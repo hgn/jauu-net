@@ -208,7 +208,7 @@ Fehler gefunden oder Verbesserungsvorschläge?
 **Autor:** Hagen Paul Pfeifer<br />
 **Titel:** Linux-Systemanalyse<br />
 **Subtitel:** Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen<br />
-**Seiten:** 864<br />
+**Seiten:** 860<br />
 **Auflage/Ort/Jahr:** 1. Auflage, München – 2025<br />
 **ISBN:** 978-3-8192-1292-5<br />
 **Copyright:** © 2022 – 2025 Hagen Paul Pfeifer<br /><br />
@@ -223,7 +223,7 @@ Fehler gefunden oder Verbesserungsvorschläge?
 
 | Merkmal                 | Wert                |
 |-------------------------|---------------------|
-| Seitenzahl              | **864**             |
+| Seitenzahl              | **860**             |
 | Format                  | **15,5 × 22 cm**    |
 | Einband                 | **Hardcover**       |
 | Laminierung             | **Matt**            |
@@ -311,7 +311,7 @@ Wenn Ihnen das Buch gefällt, freue ich mich über eine Rezension (z. B. bei Ama
   "isbn": "978-3-8192-1292-5",
   "inLanguage": "de",
   "bookFormat": "https://schema.org/Hardcover",
-  "numberOfPages": 864,
+  "numberOfPages": 860,
   "datePublished": "2025",
   "publisher": { "@type": "Organization", "name": "Books on Demand" },
   "image": "https://jauu.net/static/images/hgn-book-anim.webp",
