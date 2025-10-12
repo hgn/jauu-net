@@ -147,10 +147,10 @@ Linux-Systeme mit einer reproduzierbaren Methodik. Ausgangspunkt sind reale
 Symptome – von CPU-Lastspitzen, I/O-Einbrüchen und sporadischen Paketverlusten
 über unerklärlich viele TLB-/LLC-Misses, Branch-Mispredictions,
 Thread-Lock-Contention, Priority-Inversionen und Scheduler-Anomalien bis hin zu
-seltenen, aber außerhalb der Norm liegenden Echtzeitlatenzen oder erhöhtem
-Energieverbrauch. Das Buch zeigt, wie du Hypothesen sauber formulierst,
-Messungen kontrolliert aufsetzt, Baselines definierst und Ursachen belastbar
-verifizierst – mit Werkzeugen wie <em>perf</em>, <em>ftrace</em>,
+seltenen, jedoch außerhalb zulässiger Toleranzen liegenden Echtzeitlatenzen
+oder erhöhtem Energieverbrauch. Das Buch zeigt, wie du Hypothesen sauber
+formulierst, Messungen kontrolliert aufsetzt, Baselines definierst und Ursachen
+belastbar verifizierst – mit Werkzeugen wie <em>perf</em>, <em>ftrace</em>,
 <em>eBPF</em>, Tracepoints sowie System-Tracern (z. B. Intel PT, ARM CoreSight,
 Perfetto/Trace Compass) – und daraus zielgerichtete Optimierungen ableitest.
 
@@ -229,18 +229,11 @@ $ cd greedy-brk-alloctor/
 $ make all
 ````
 
-### Voraussetzungen
-
-* **Kernel:** aktueller Distro-Kernel; eBPF-Beispiele benötigen BTF/CO-RE.
-* **Rechte:** teils `root`/`CAP_SYS_ADMIN` (perf systemweit, ftrace mount, eBPF attach).
-* **Pakete:** `linux-perf`, `bpftrace`, `clang`/`llvm`, `make`; optional Python für Auswertung.
-
-
 ### Lizenz
 
-Der **Beispielcode** zum Buch ist **Public Domain**. Du darfst damit **alles**
-machen – nutzen, kopieren, verändern, weiterverbreiten, kommerziell verwenden –
-**ohne Auflagen**.
+Der Beispielcode zum Buch ist gemeinfrei (Public Domain). Seine Nutzung,
+Vervielfältigung, Veränderung, Weiterverbreitung sowie kommerzielle Verwendung
+sind ohne Auflagen gestattet.
 
 ---
 
