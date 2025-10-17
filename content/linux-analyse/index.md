@@ -93,9 +93,9 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
 <section class="buybox-simple" aria-label="Jetzt kaufen (Hardcover Version)">
   <h2>Jetzt kaufen</h2>
   <ul class="buybox-list">
-    <li><a href="AMAZON_URL" target="_blank" rel="noopener">Bei Amazon</a></li>
+    <li><a href="https://www.amazon.de/dp/3819212922" target="_blank" rel="noopener">Bei Amazon</a></li>
     <li><a href="https://www.buchhandel.de/buch/9783819212925" target="_blank" rel="noopener">Im Buchhandel</a></li>
-    <li><a href="BOD_URL" target="_blank" rel="noopener">Direkt bei BoD</a> (Kreditkarte und PayPal möglich)</li>
+    <li><a href="https://buchshop.bod.de/linux-systemanalyse-hagen-paul-pfeifer-9783819212925" target="_blank" rel="noopener">Direkt bei BoD</a> (Kreditkarte und PayPal möglich)</li>
   </ul>
   <p class="buybox-note">
     <small class="buybox-note">Tipp: Direktkauf bei BoD bedeutet für mich den höchsten Autorenanteil – im Vergleich zu Amazon/Buchhandel bleibt pro Exemplar etwas mehr bei mir hängen.</small>
@@ -259,8 +259,8 @@ Fehler gefunden oder Verbesserungsvorschläge?
 ```
 @book{Pfeifer2025LinuxAnalyse,
   author = {Hagen Paul Pfeifer},
-  title = {Linux-Systemanalyse},
-  subtitle = {Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen},
+  title = {{Linux-Systemanalyse}},
+  subtitle = {{Von High-Level-Architekturanalysen zu Low-Level-Code-Optimierungen}},
   year = {2025},
   isbn = {978-3-8192-1292-5},
   address = {München},
