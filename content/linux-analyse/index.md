@@ -246,7 +246,9 @@ Fehler gefunden oder Verbesserungsvorschläge?
 
 | ID | Seite | Fehler (kurz) | Fixed in | Datum | Reporter |
 |----|------------------|---------------|--------|----------|--------|----------|
-| YYYY-NNN | – | – | — | YYYY-MM-DD | N.N. |
+| 2025-000 | 599 | Wortwiederholung ("im im") | — | 2025-10-23 | Steve Markgraf |
+| 2025-001 | 26 | Wiederholung ("#") | — | 2025-11-07 | Thomas Fischer |
+| 2025-002 | 28 | Rechtschreibung ("Der verbleubende Rest") | — | 2025-11-07 | Thomas Fischer |
 
 *Stand: wird fortlaufend aktualisiert.*
 
