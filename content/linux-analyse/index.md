@@ -241,7 +241,8 @@ sind ohne Auflagen gestattet.
 
 Fehler gefunden oder Verbesserungsvorschläge?
 - **Errata per Mail:** [hagen@jauu.net](mailto:hagen@jauu.net?subject=%5BLinux-Systemanalyse%5D%20Errata&body=Seite:%20%0D%0AKapitel/Abschnitt:%20%0D%0ABeschreibung:%20%0D%0AVorschlag%20zur%20Korrektur:%20)
-- Bitte Seite, Abschnitt/Zeilennummer und kurze Beschreibung angeben.  
+- Bitte Seite, Abschnitt/Zeilennummer und kurze Beschreibung angeben.
+- Anonym oder öffentliche Namensnennung?
 - Der öffentliche Errata-Stand wird hier fortlaufend gepflegt.
 
 | ID | Seite | Fehler (kurz) | Fixed in | Datum | Reporter |
