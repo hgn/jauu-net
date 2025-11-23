@@ -1,54 +1,9 @@
-/*
-@font-face {
-    font-family: 'GoogleSans';
-    src: url('/fonts/GoogleSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'roboto';
-    src: url('/fonts/Roboto-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'roboto';
-    src: url('/fonts/Roboto-ThinItalic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'roboto';
-    src: url('/fonts/Roboto-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-
-
-@font-face {
-    font-family: 'roboto';
-    src: url('/fonts/Roboto-Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-*/
-
+/* --- Fonts --- */
 @font-face {
     font-family: 'roboto';
     src: url('/fonts/Roboto-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
-    /* font-display: swap; */
 }
 
 @font-face {
@@ -56,7 +11,6 @@
     src: url('/fonts/Roboto-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
-    /* font-display: swap; */
 }
 
 @font-face {
@@ -64,7 +18,6 @@
     src: url('/fonts/Roboto-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-    /* font-display: swap; */
 }
 
 @font-face {
@@ -72,30 +25,30 @@
     src: url('/fonts/Roboto-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
-    /* font-display: swap; */
 }
 
 body {
-    font-family: 'roboto',roboto,arial,helvetica,sans-serif;
+    font-family: 'roboto', roboto, arial, helvetica, sans-serif;
     font-weight: 300;
 }
 
 .headerbg {
-  height: 15px;
-  width: 100%;
-  top: 0px;
-  z-index: 0;
-  background-image: url(/images/header.png);
-  background-repeat: repeat;
+    height: 15px;
+    width: 100%;
+    top: 0px;
+    z-index: 0;
+    background-image: url(/images/header.png);
+    background-repeat: repeat;
 }
 
+/* --- Layout Container --- */
 .home-container {
-    max-width: var(--main-width); /* Nutzt PaperMod Breite */
+    max-width: var(--main-width);
     margin: 0 auto;
     padding: 2rem 0;
 }
 
-/* 1. Hero Section */
+/* --- 1. Hero Section --- */
 .hero-section {
     margin-bottom: 3rem;
     padding: 1rem 0;
@@ -105,25 +58,46 @@ body {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    color: var(--primary); /* Nutzt die Theme-Farbe */
+    color: var(--primary);
 }
 
-.hero-subtitle {
+/* === ABSTANDS-FIX START === */
+.hero-section .section-heading {
+    margin-top: 0;
+    margin-bottom: 0.3rem; /* Hier den Abstand steuern (kleiner = enger) */
+    line-height: 1.2;      /* Zieht die Überschrift vertikal zusammen */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hero-section .hero-subtitle {
+    margin-top: 0;         /* Zwingend 0, damit es nach oben rutscht */
     font-size: 1.3rem;
-    color: var(--secondary); /* Etwas gedämpftere Textfarbe */
-    line-height: 1.6;
+    color: var(--secondary);
+    line-height: 1.3;
     max-width: 80%;
 }
 
+.hero-section {
+    transition: all 0.4s ease;
+}
+
+/* Wenn man über die Sektion fährt... */
+.hero-section:hover .section-heading {
+    color: var(--primary); /* Titel färbt sich ein */
+    /* text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); Leichter Schein */
+}
+
+.hero-section:hover .hero-subtitle {
+    color: #fff; /* Text wird heller/weißer */
+}
 
 
-
-
+/* --- 2. Navigation Grid (Kacheln) --- */
 .nav-grid {
     display: grid;
-    /* Erzwingt genau 2 Spalten mit jeweils 50% Platz */
-    grid-template-columns: 1fr 1fr; 
-    gap: 1.5rem; /* Abstand zwischen den Kacheln */
+    grid-template-columns: 1fr 1fr; /* Genau 2 Spalten */
+    gap: 1.5rem;
     margin-bottom: 4rem;
 }
 
@@ -131,29 +105,49 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    /* Basis Styling */
     background: var(--entry);
     border: 1px solid var(--border);
     padding: 2rem;
     border-radius: var(--radius);
     text-decoration: none !important;
+    
+    /* Animation Setup */
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; /* Wichtig für Canvas */
+    z-index: 1;         /* Text Layer */
+    overflow: hidden;   /* Beschnitt */
 }
 
+/* Hover Effekt: Abdunkeln + Graph sichtbar */
 .nav-card:hover {
-    /* Trick: Wir nehmen die Originalfarbe (var(--entry)) 
-       und legen 30% Schwarz (rgba(0,0,0, 0.3)) darüber.
-       Dadurch wird es abgedunkelt, egal welche Farbe das Theme gerade hat.
-    */
+    /* Dunkler Schleier über der Farbe */
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--entry);
     
-    border-color: var(--primary); /* Rand leuchtet weiterhin in Theme-Farbe */
+    border-color: var(--primary);
     transform: translateY(-2px);
-    
-    /* Optional: Schatten anpassen, damit er tiefer wirkt */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
 }
 
-/* ... Text Styles wie gehabt ... */
+/* Das Canvas für den Graphen */
+.nav-card canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;    /* Hintergrund Layer */
+    opacity: 0;     /* Unsichtbar */
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.nav-card:hover canvas {
+    opacity: 1; /* Sichtbar beim Hover */
+}
+
+/* Text in den Kacheln */
 .nav-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -166,6 +160,10 @@ body {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     line-height: 1.5;
+    
+    /* Monospace Font für technischen Look */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    opacity: 0.9;
 }
 
 .nav-card .arrow {
@@ -173,46 +171,16 @@ body {
     font-weight: bold;
     align-self: flex-end;
     color: var(--primary);
+    font-family: monospace;
 }
 
 /* --- Mobile Optimierung --- */
-/* Auf kleinen Bildschirmen (Tablets/Handys) untereinander stapeln */
 @media screen and (max-width: 768px) {
     .nav-grid {
-        grid-template-columns: 1fr; /* 1 Spalte statt 2 */
+        grid-template-columns: 1fr; /* Untereinander auf Handy */
+    }
+    
+    .hero-subtitle {
+        max-width: 100%;
     }
 }
-
-
-.nav-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 1.5rem; 
-    margin-bottom: 4rem;
-}
-
-.nav-card {
-    /* ... deine existierenden Styles ... */
-    position: relative; /* Wichtig für absolute Positionierung des Canvas */
-    z-index: 1;         /* Text ist auf Layer 1 */
-    background: var(--entry); /* Fallback Hintergrund */
-    overflow: hidden;   /* Damit der Graph nicht rausmalt */
-}
-
-/* Das Canvas für den Graphen */
-.nav-card canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Liegt HINTER dem Text */
-    opacity: 0;  /* Standardmäßig unsichtbar */
-    transition: opacity 0.5s ease;
-    pointer-events: none; /* Maus soll durchklicken können */
-}
-
-.nav-card:hover canvas {
-    opacity: 1; /* Sichtbar beim Hover */
-}
-

@@ -2,11 +2,14 @@
 <div class="home-container">
 
     <section class="hero-section">
-        <p class="hero-subtitle">
-        <h2 class="section-heading">Deep technical roots &mdash; Strategic foresight</h2><br />
-            Specializing in Linux internals, networking, and optimizing the engineering workflow for the modern era.
-        </p>
-    </section>
+      <h2 class="section-heading">Deep technical roots &mdash; Strategic foresight</h2>
+      
+      <p class="hero-subtitle">
+          This is my digital workbench for deep dives into Linux internals,
+          networking, and optimizing the engineering workflow. A personal space
+          for projects distinct from my professional role.
+      </p>
+  </section>
 
     <section class="nav-grid">
         <a href="/posts/" class="nav-card">
@@ -41,7 +44,7 @@
       <h2 class="section-heading">Recent Technical Perspectives</h2><br />
         
         {{ $pages := where .Site.RegularPages "Section" "posts" }}
-        {{ range first 3 $pages }}
+        {{ range first 6 $pages }}
         <article class="post-entry">
             {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
             {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
