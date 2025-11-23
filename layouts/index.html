@@ -1,0 +1,76 @@
+{{ define "main" }}
+<div class="home-container">
+
+    <section class="hero-section">
+        <p class="hero-subtitle">
+        <h2 class="section-heading">Deep technical roots &mdash; Strategic foresight</h2><br />
+            Specializing in Linux internals, networking, and optimizing the engineering workflow for the modern era.
+        </p>
+    </section>
+
+    <section class="nav-grid">
+        <a href="/posts/" class="nav-card">
+            <h3>Technical Writings</h3>
+            <p>Deep dives, tutorials, and kernel analysis.</p>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="/talks/" class="nav-card">
+            <h3>Public Speaking</h3>
+            <p>Conference talks, slide decks, and recordings.</p>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="/linux-analyse/" class="nav-card">
+            <h3>The Book</h3>
+            <p>Insights into my book project and publications.</p>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="/tags/" class="nav-card">
+            <h3>Topic Cloud</h3>
+            <p>Browse content by specific technologies.</p>
+            <span class="arrow">→</span>
+        </a>
+    </section>
+
+    <div class="separator-container">
+    </div>
+
+    <section class="recent-posts">
+      <h2 class="section-heading">Recent Technical Perspectives</h2><br />
+        
+        {{ $pages := where .Site.RegularPages "Section" "posts" }}
+        {{ range first 3 $pages }}
+        <article class="post-entry">
+            {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
+            {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+            
+            <header class="entry-header">
+                <h2>
+                    {{- .Title }}
+                    {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+                </h2>
+            </header>
+            
+            {{- if (ne (.Param "hideSummary") true) }}
+            <div class="entry-content">
+                <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+            </div>
+            {{- end }}
+            
+            <footer class="entry-footer">
+                {{- partial "post_meta.html" . -}}
+            </footer>
+            
+            <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+        </article>
+        {{ end }}
+        
+        <div class="more-posts">
+            <a href="/posts/">View Archive →</a>
+        </div>
+    </section>
+
+</div>
+{{ end }}

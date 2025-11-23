@@ -88,3 +88,202 @@ body {
   background-image: url(/images/header.png);
   background-repeat: repeat;
 }
+
+.home-container {
+    max-width: var(--main-width); /* Nutzt PaperMod Breite */
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* 1. Hero Section */
+.hero-section {
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary); /* Nutzt die Theme-Farbe */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--secondary); /* Etwas gedämpftere Textfarbe */
+    line-height: 1.6;
+    max-width: 80%;
+}
+
+
+
+
+
+.nav-grid {
+    display: grid;
+    /* Erzwingt genau 2 Spalten mit jeweils 50% Platz */
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; /* Abstand zwischen den Kacheln */
+    margin-bottom: 4rem;
+}
+
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-decoration: none !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* ... Hover Effekte wie gehabt ... */
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: var(--tertiary);
+}
+
+/* ... Text Styles wie gehabt ... */
+.nav-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.nav-card p {
+    color: var(--secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.nav-card .arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: flex-end;
+    color: var(--primary);
+}
+
+/* --- Mobile Optimierung --- */
+/* Auf kleinen Bildschirmen (Tablets/Handys) untereinander stapeln */
+@media screen and (max-width: 768px) {
+    .nav-grid {
+        grid-template-columns: 1fr; /* 1 Spalte statt 2 */
+    }
+}
+
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; 
+    margin-bottom: 4rem;
+}
+
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* Base Colors */
+    background: var(--entry);
+    border: 1px solid var(--border);
+    
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-decoration: none !important;
+    
+    /* Crucial for the effect: */
+    position: relative; 
+    overflow: hidden; /* Clips the ping so it doesn't spill out */
+    z-index: 1; /* Ensures text stays on top */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* The "Ping" Circle */
+.nav-card::after {
+    content: '';
+    position: absolute;
+    
+    /* Center the ping effect */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Start tiny and centered */
+    
+    /* Size of the circle (large enough to cover card when scaled) */
+    width: 100%; 
+    padding-top: 100%; /* Creates a perfect circle based on width */
+    border-radius: 50%;
+    
+    /* The Visual: A radial gradient using your primary color */
+    /* We use alpha (opacity) so it's subtle. Adjust 0.1 to 0.2 for more intensity */
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity: 0;
+    
+    z-index: -1; /* Place behind the text */
+    pointer-events: none;
+}
+
+/* Hover Action */
+.nav-card:hover {
+    border-color: var(--primary); /* Highlight border */
+    transform: translateY(-2px);
+}
+
+/* The Animation Trigger */
+.nav-card:hover::after {
+    /* Name | Duration | Timing | Iteration */
+    animation: sonarPing 0.8s ease-out forwards;
+}
+
+/* The Animation Keyframes */
+@keyframes sonarPing {
+    0% {
+        opacity: 0.4; /* Starts visible */
+        transform: translate(-50%, -50%) scale(0.2); /* Small center dot */
+    }
+    100% {
+        opacity: 0; /* Fades away completely */
+        transform: translate(-50%, -50%) scale(2.5); /* Expands way past borders */
+    }
+}
+
+/* Text Styles (Keep these to ensure readability) */
+.nav-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    color: var(--primary);
+    position: relative;
+}
+
+.nav-card p {
+    color: var(--secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.nav-card .arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: flex-end;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.nav-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+    .nav-grid {
+        grid-template-columns: 1fr;
+    }
+}
