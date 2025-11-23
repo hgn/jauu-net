@@ -96,6 +96,7 @@ einem systematischen Leitfaden zur Analyse moderner Linux-Systeme.
     <li><a href="https://www.amazon.de/dp/3819212922" target="_blank" rel="noopener">Bei Amazon</a></li>
     <li><a href="https://www.buchhandel.de/buch/9783819212925" target="_blank" rel="noopener">Im Buchhandel</a></li>
     <li><a href="https://buchshop.bod.de/linux-systemanalyse-hagen-paul-pfeifer-9783819212925" target="_blank" rel="noopener">Direkt bei BoD</a> (Kreditkarte und PayPal möglich)</li>
+    <li><a href="https://www.lehmanns.de/shop/mathematik-informatik/83618640-9783819212925-linux-systemanalyse" target="_blank" rel="noopener">Lehmanns.de</a></li>
   </ul>
   <p class="buybox-note">
     <small class="buybox-note">Tipp: Direktkauf bei BoD bedeutet für mich den höchsten Autorenanteil – im Vergleich zu Amazon/Buchhandel bleibt pro Exemplar etwas mehr bei mir hängen.</small>
