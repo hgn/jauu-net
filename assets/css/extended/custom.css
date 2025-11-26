@@ -220,3 +220,29 @@ body {
         max-width: 100%;
     }
 }
+
+@keyframes slot-in {
+    0% {
+        opacity: 0;
+        /* Startet etwas weiter rechts oder links */
+        transform: translateX(-20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Wir wenden das auf die einzelnen Sektionen an */
+.hero-section, 
+.nav-grid, 
+.recent-posts {
+    opacity: 0;
+    /* Eine sehr "eckige" Bewegungskurve (wenig Bremsen am Ende) */
+    animation: slot-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Kaskade (nacheinander) */
+.hero-section { animation-delay: 0.05s; }
+.nav-grid     { animation-delay: 0.15s; }
+.recent-posts { animation-delay: 0.25s; }
