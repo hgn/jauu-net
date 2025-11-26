@@ -48,50 +48,86 @@ body {
     padding: 2rem 0;
 }
 
-/* --- 1. Hero Section --- */
+/* --- Hero Section: Vertical Brackets Hover (Stable Version) --- */
+
 .hero-section {
-    margin-bottom: 3rem;
-    padding: 1rem 0;
+    position: relative; /* Ankerpunkt für die Balken */
+    /* KEIN transform hier, damit der Text beim Hover nicht zuckt/springt */
 }
 
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    color: var(--primary);
+/* Definition der Balken (Links und Rechts) */
+.hero-section::before,
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Dicke der Indikatoren */
+    background-color: var(--primary); 
+    
+    /* Zustand: Sie sind schon "ausgefahren" (volle Höhe), aber unsichtbar */
+    transform: scaleY(1); 
+    opacity: 0; /* Unsichtbar */
+    
+    /* Nur die Sichtbarkeit animieren, keine Bewegung */
+    transition: opacity 0.4s ease;
+    
+    /* Optional: Glow 
+    box-shadow: 0 0 10px var(--primary); */
 }
 
-/* === ABSTANDS-FIX START === */
-.hero-section .section-heading {
+/* Positionierung Links */
+.hero-section::before {
+    left: -15px; 
+}
+
+/* Positionierung Rechts */
+.hero-section::after {
+    right: -15px; 
+}
+
+/* --- Hover State --- */
+
+/* Beim Hover einfach nur sichtbar machen (einfärben) */
+.hero-section:hover::before,
+.hero-section:hover::after {
+    opacity: 0.2;
+}
+
+/* --- Text Anpassung wie gewünscht --- */
+.hero-section .hero-subtitle {
+    line-height: 1.3; /* Engerer Zeilenabstand */
+    
+    /* Falls du vorher margin-top: 0 hattest, behalte das bei */
     margin-top: 0;
-    margin-bottom: 0.3rem; /* Hier den Abstand steuern (kleiner = enger) */
-    line-height: 1.2;      /* Zieht die Überschrift vertikal zusammen */
+    font-size: 1.3rem;
+    color: var(--secondary);
+    max-width: 80%;
+}
+
+.hero-section .section-heading {
+    /* Vorher: 0.3rem. Jetzt: 0.8rem für mehr Luft zur nächsten Zeile */
+    margin-bottom: 0.8rem; 
+    
+    margin-top: 0;
+    line-height: 1.2;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
 .hero-section .hero-subtitle {
-    margin-top: 0;         /* Zwingend 0, damit es nach oben rutscht */
+    /* Abstand vom Text nach unten (Ende der Hero Box) */
+    margin-bottom: 2rem; 
+    
+    margin-top: 0;
     font-size: 1.3rem;
     color: var(--secondary);
+    
+    /* Dein gewünschter Zeilenabstand */
     line-height: 1.3;
+    
     max-width: 80%;
 }
-
-.hero-section {
-    transition: all 0.4s ease;
-}
-
-/* Wenn man über die Sektion fährt... */
-.hero-section:hover .section-heading {
-    color: var(--primary); /* Titel färbt sich ein */
-    /* text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); Leichter Schein */
-}
-
-.hero-section:hover .hero-subtitle {
-    color: #fff; /* Text wird heller/weißer */
-}
-
 
 /* --- 2. Navigation Grid (Kacheln) --- */
 .nav-grid {
