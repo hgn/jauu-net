@@ -158,11 +158,20 @@ body {
 
 /* Hover Effekt: Abdunkeln + Graph sichtbar */
 .nav-card:hover {
-    /* Dunkler Schleier über der Farbe */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--entry);
+      background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--entry);
     
     border-color: var(--primary);
     transform: translateY(-2px);
+    
+    /* Schatten etwas leichter für Light Mode */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .nav-card:hover {
+    /* Hier bleiben wir bei deinen 30% (0.3), damit der Graph schön leuchtet */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--entry);
+    
+    /* Tieferer Schatten für Dark Mode */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
 }
 
