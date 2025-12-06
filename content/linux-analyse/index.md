@@ -251,7 +251,7 @@ Fehler gefunden oder Verbesserungsvorschläge?
 | 2025-000 | 599 | Wortwiederholung ("im im") | — | 2025-10-23 | Steve Markgraf |
 | 2025-001 | 26 | Wiederholung ("#") | — | 2025-11-07 | Thomas Fischer |
 | 2025-002 | 28 | Rechtschreibung ("Der verbleubende Rest") | — | 2025-11-07 | Thomas Fischer |
-| 2025-003 | Front, "Störer" | Verteile  | — | 2025-12-02 | Arne Tarara |
+| 2025-003 | Front, "Störer" | Verteile -> Verteilte  | — | 2025-12-02 | Arne Tarara |
 | 2025-004 | 7 | Manpage Section Fehler für mlone (1 -> 2)  | — | 2025-12-06 | AI |
 | 2025-005 | 169 | Aufrufkonventionen (Argument Passing) bei x86(32bit) ist über Stack, nicht Register.  | — | 2025-12-06 | AI |
 | 2025-006 | 323 | i7-1700K -> i7-17000K  | — | 2025-12-06 | AI |
