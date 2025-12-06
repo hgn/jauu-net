@@ -258,9 +258,9 @@ Fehler gefunden oder Verbesserungsvorschläge?
 | 2025-007 | 323 | "30 ns, was einem „skid“ von $±15 µs$" -> 30 ns, was einem „skid“ von ±15 ns  | — | 2025-12-06 | AI |
 | 2025-008 | 457 | Manpage Section Fehler für malloc(2 -> 3)  | — | 2025-12-06 | AI |
 | 2025-009 | 599 | ACPI MP -> ACPI PM  | — | 2025-12-06 | AI |
-| 2025-009 | 600 | Fehler im Code: 100000000 -> 1000000000.0  | — | 2025-12-06 | AI |
-| 2025-009 | 614 | timerslack_ns befindet sich im procfs, nicht sysfs  | — | 2025-12-06 | AI |
-| 2025-009 | 625 | $3,6$\,MJ entspricht $3.6\,x\,10^{6}$\,Joule nicht 10^{9}  | — | 2025-12-06 | AI |
+| 2025-010 | 600 | Fehler im Code: 100000000 -> 1000000000.0  | — | 2025-12-06 | AI |
+| 2025-011 | 614 | timerslack_ns befindet sich im procfs, nicht sysfs  | — | 2025-12-06 | AI |
+| 2025-012 | 625 | $3,6$\,MJ entspricht $3.6\,x\,10^{6}$\,Joule nicht 10^{9}  | — | 2025-12-06 | AI |
 
 *Stand: wird fortlaufend aktualisiert.*
 
