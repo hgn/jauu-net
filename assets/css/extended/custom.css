@@ -30,6 +30,21 @@
 body {
     font-family: 'roboto', roboto, arial, helvetica, sans-serif;
     font-weight: 300;
+    /* skyline background in lower-right corner, behind content */
+    background-image: url('/images/sky-bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    /* always span full width */
+    background-size: 100% auto;
+}
+
+/* list pages (home, tags, posts index, etc.), including dark mode */
+body.list,
+body.list.dark {
+    background-image: url('/images/sky-bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 100% auto;
 }
 
 .headerbg {
