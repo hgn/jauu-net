@@ -261,6 +261,9 @@ Fehler gefunden oder Verbesserungsvorschläge?
 | 2025-010 | 600 | Fehler im Code: 100000000 -> 1000000000.0  | — | 2025-12-06 | AI |
 | 2025-011 | 614 | timerslack_ns befindet sich im procfs, nicht sysfs  | — | 2025-12-06 | AI |
 | 2025-012 | 625 | $3,6$\,MJ entspricht $3.6\,x\,10^{6}$\,Joule nicht 10^{9}  | — | 2025-12-06 | AI |
+| 2025-013 | 223 | "perf mem --phys-addr -t load record" in verb Umgebung, nicht textbf  | — | 2025-12-08 | Hagen Paul Pfeifer |
+| 2025-014 | 146 | taskset -c <n>, nicht taskset -C <n>, anders wie perf ;-)   | — | 2025-12-08 | Hagen Paul Pfeifer |
+| 2025-015 | 210 | taskset -c <n>, nicht taskset -C <n>   | — | 2025-12-08 | Hagen Paul Pfeifer |
 
 *Stand: wird fortlaufend aktualisiert.*
 
