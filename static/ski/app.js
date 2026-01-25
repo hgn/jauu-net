@@ -45,10 +45,10 @@
   nextBtn?.addEventListener("click", next);
   prevBtn?.addEventListener("click", prev);
 
-  let timer = setInterval(next, 5200);
+  let timer = setInterval(next, 2000);
   const resetTimer = () => {
     clearInterval(timer);
-    timer = setInterval(next, 5200);
+    timer = setInterval(next, 2000);
   };
   viewport.addEventListener("pointerdown", resetTimer);
   nextBtn?.addEventListener("click", resetTimer);
