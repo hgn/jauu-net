@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:jauu.net)",
+      "Skill(update-config)",
+      "Bash(mkdir -p ~/.claude/commands)",
+      "Bash(cp /home/pfeifer/src/www/jauu-net/.claude/commands/deai.md ~/.claude/commands/deai.md)"
+    ]
+  }
+}
