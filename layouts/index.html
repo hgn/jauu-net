@@ -31,9 +31,9 @@
             <span class="arrow">→</span>
         </a>
 
-        <a href="/tags/" class="nav-card">
-            <h3>Topic Cloud</h3>
-            <p>Browse content by specific technologies.</p>
+        <a href="/projects/" class="nav-card">
+            <h3>Projects</h3>
+            <p>Open source tools for network and system analysis.</p>
             <span class="arrow">→</span>
         </a>
     </section>
@@ -42,7 +42,7 @@
     </div>
 
     <section class="recent-posts">
-      <h2 class="section-heading">Recent Technical Perspectives</h2><br />
+      <h2 class="section-heading">Recent Posts</h2><br />
         
         {{ $pages := where .Site.RegularPages "Section" "posts" }}
         {{ range first 6 $pages }}

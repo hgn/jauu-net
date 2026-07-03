@@ -1,0 +1,129 @@
+---
+title: "Projects"
+layout: "about/single"
+showToc: false
+showBreadCrumbs: false
+disableShare: true
+showReadingTime: false
+disableSpecial1stPost: false
+displayFullLangName: false
+showPostNavLinks: false
+showCodeCopyButtons: false
+showRssButtonInSectionTermList: false
+tocOpen: false
+summary: ""
+placeholder: ""
+hideMeta: true
+hideTitle: true
+---
+<h1>Projects</h1>
+
+<p class="projects-intro">
+A selection of open source tools I wrote and maintain. Most of them grew out
+of real analysis work: a question I could not answer with existing tooling
+turned into a program.
+</p>
+
+<section class="nav-grid projects-grid">
+
+  <a href="https://github.com/hgn/perfume" class="nav-card project-card">
+    <h3>perfume</h3>
+    <p>A small library around the Linux user-events interface: register and
+    write trace events from userspace, consume them with perf or ftrace,
+    without the raw kernel API friction.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#969696">C</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/barnowld" class="nav-card project-card">
+    <h3>barnowld</h3>
+    <p>A daemon for real-time detection of cache side-channel attacks
+    (Spectre/Meltdown class), built on hardware performance counters. Zero
+    dependencies.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#969696">C</span>
+      <span class="stars">&#9733; 18</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/machine-code-analyzer" class="nav-card project-card">
+    <h3>machine-code-analyzer</h3>
+    <p>A machine code analyzer for x86_64: instruction mix, basic block and
+    branch statistics for compiled binaries.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#3572a5">Python</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/ospfd" class="nav-card project-card">
+    <h3>ospfd</h3>
+    <p>An OSPFv2 routing protocol implementation. Written to understand the
+    protocol from the inside, not from the RFC alone.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#969696">C</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/schecker" class="nav-card project-card">
+    <h3>schecker</h3>
+    <p>A C/C++ security checker built on Coccinelle and clang-tidy, packaged
+    so semantic-patch-based auditing fits into a normal CI pipeline.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#3572a5">Python</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/captcp" class="nav-card project-card">
+    <h3>captcp</h3>
+    <p>TCP analysis for PCAP files. Reconstructs connections and flows from a
+    capture and generates throughput, RTT, retransmission and sequence
+    graphs.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#3572a5">Python</span>
+      <span class="stars">&#9733; 115</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/kernel-magnifier" class="nav-card project-card">
+    <h3>kernel-magnifier</h3>
+    <p>An ftrace recorder and visualizer for kernel callchains: what the
+    kernel actually does on behalf of your workload, rendered as navigable
+    graphs.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#3572a5">Python</span>
+      <span class="stars">&#9733; 11</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/hgn/ldnsd" class="nav-card project-card">
+    <h3>ldnsd</h3>
+    <p>A lightweight DNS server for environments where BIND is several orders
+    of magnitude too much.</p>
+    <div class="project-meta">
+      <span class="lang" style="--lang-color:#969696">C</span>
+      <span class="arrow">→</span>
+    </div>
+  </a>
+
+</section>
+
+<p class="projects-more">
+<a href="https://github.com/hgn">All repositories on GitHub →</a>
+</p>
+
+<br />
+
+<style>
+  /* match the homepage (body.list) background so the cards read as tiles;
+     dark mode already uses the same background on both page kinds */
+  body:not(.dark) { background-color: var(--code-bg); }
+</style>
+<script src="/js/graph-hover.js" defer></script>

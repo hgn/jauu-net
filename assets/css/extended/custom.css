@@ -56,98 +56,70 @@ body.list.dark {
     background-repeat: repeat;
 }
 
-/* --- Layout Container --- */
+/* --- Layout container --- */
 .home-container {
     max-width: var(--main-width);
     margin: 0 auto;
     padding: 2rem 0;
 }
 
-/* --- Hero Section: Vertical Brackets Hover (Stable Version) --- */
+/* --- Hero section: vertical bracket indicators on hover --- */
 
 .hero-section {
-    position: relative; /* Ankerpunkt für die Balken */
-    /* KEIN transform hier, damit der Text beim Hover nicht zuckt/springt */
+    /* anchor for the bracket pseudo-elements; no transform here so the
+       text does not shift on hover */
+    position: relative;
 }
 
-/* Definition der Balken (Links und Rechts) */
+/* left and right bracket bars: full height, invisible until hover */
 .hero-section::before,
 .hero-section::after {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px; /* Dicke der Indikatoren */
-    background-color: var(--primary); 
-    
-    /* Zustand: Sie sind schon "ausgefahren" (volle Höhe), aber unsichtbar */
-    transform: scaleY(1); 
-    opacity: 0; /* Unsichtbar */
-    
-    /* Nur die Sichtbarkeit animieren, keine Bewegung */
+    width: 2px;
+    background-color: var(--primary);
+    transform: scaleY(1);
+    opacity: 0;
+    /* animate visibility only, no movement */
     transition: opacity 0.4s ease;
-    
-    /* Optional: Glow 
-    box-shadow: 0 0 10px var(--primary); */
 }
 
-/* Positionierung Links */
 .hero-section::before {
-    left: -15px; 
+    left: -15px;
 }
 
-/* Positionierung Rechts */
 .hero-section::after {
-    right: -15px; 
+    right: -15px;
 }
 
-/* --- Hover State --- */
-
-/* Beim Hover einfach nur sichtbar machen (einfärben) */
 .hero-section:hover::before,
 .hero-section:hover::after {
     opacity: 0.2;
 }
 
-/* --- Text Anpassung wie gewünscht --- */
-.hero-section .hero-subtitle {
-    line-height: 1.3; /* Engerer Zeilenabstand */
-    
-    /* Falls du vorher margin-top: 0 hattest, behalte das bei */
-    margin-top: 0;
-    font-size: 1.3rem;
-    color: var(--secondary);
-    max-width: 80%;
-}
-
 .hero-section .section-heading {
-    /* Vorher: 0.3rem. Jetzt: 0.8rem für mehr Luft zur nächsten Zeile */
-    margin-bottom: 0.8rem; 
-    
     margin-top: 0;
+    margin-bottom: 0.8rem;
     line-height: 1.2;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
 .hero-section .hero-subtitle {
-    /* Abstand vom Text nach unten (Ende der Hero Box) */
-    margin-bottom: 2rem; 
-    
     margin-top: 0;
+    margin-bottom: 2rem;
     font-size: 1.3rem;
     color: var(--secondary);
-    
-    /* Dein gewünschter Zeilenabstand */
     line-height: 1.3;
-    
     max-width: 80%;
 }
 
-/* --- 2. Navigation Grid (Kacheln) --- */
+/* --- Navigation grid (cards) --- */
 .nav-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Genau 2 Spalten */
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-bottom: 4rem;
 }
@@ -156,58 +128,48 @@ body.list.dark {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    /* Basis Styling */
     background: var(--entry);
     border: 1px solid var(--border);
     padding: 2rem;
     border-radius: var(--radius);
     text-decoration: none !important;
-    
-    /* Animation Setup */
     transition: transform 0.2s, box-shadow 0.2s;
-    position: relative; /* Wichtig für Canvas */
-    z-index: 1;         /* Text Layer */
-    overflow: hidden;   /* Beschnitt */
+    position: relative; /* required for the canvas layer */
+    z-index: 1;
+    overflow: hidden;
 }
 
-/* Hover Effekt: Abdunkeln + Graph sichtbar */
+/* hover: slight darkening, graph canvas becomes visible */
 .nav-card:hover {
-      background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--entry);
-    
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--entry);
     border-color: var(--primary);
     transform: translateY(-2px);
-    
-    /* Schatten etwas leichter für Light Mode */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 body.dark .nav-card:hover {
-    /* Hier bleiben wir bei deinen 30% (0.3), damit der Graph schön leuchtet */
+    /* stronger darkening in dark mode so the graph stands out */
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--entry);
-    
-    /* Tieferer Schatten für Dark Mode */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Das Canvas für den Graphen */
+/* graph canvas, hidden until card hover */
 .nav-card canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;    /* Hintergrund Layer */
-    opacity: 0;     /* Unsichtbar */
+    z-index: -1;
+    opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
 }
 
 .nav-card:hover canvas {
-    opacity: 1; /* Sichtbar beim Hover */
+    opacity: 1;
 }
 
-/* Text in den Kacheln */
 .nav-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -220,8 +182,7 @@ body.dark .nav-card:hover {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     line-height: 1.5;
-    
-    /* Monospace Font für technischen Look */
+    /* monospace for a technical look */
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     opacity: 0.9;
 }
@@ -234,22 +195,96 @@ body.dark .nav-card:hover {
     font-family: monospace;
 }
 
-/* --- Mobile Optimierung --- */
+/* --- Projects page --- */
+
+/* the page body is wrapped in .post-content, which underlines links via
+   box-shadow; cards are links and must not inherit that */
+.post-content .project-card {
+    box-shadow: none;
+}
+
+.post-content .project-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .post-content .project-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.projects-intro {
+    max-width: 80%;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card h3 {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 1.25rem;
+}
+
+.project-card p {
+    font-family: inherit;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.85rem;
+    color: var(--secondary);
+}
+
+.project-meta .lang::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--lang-color, var(--secondary));
+    margin-right: 6px;
+    vertical-align: -1px;
+}
+
+/* arrow sits right-aligned in the meta row, not at the card bottom */
+.project-card .arrow {
+    margin-left: auto;
+    align-self: center;
+}
+
+.projects-more {
+    margin-bottom: 2rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-intro {
+        max-width: 100%;
+    }
+}
+
+/* --- Mobile --- */
 @media screen and (max-width: 768px) {
     .nav-grid {
-        grid-template-columns: 1fr; /* Untereinander auf Handy */
+        grid-template-columns: 1fr;
     }
-    
+
     .hero-subtitle {
         max-width: 100%;
     }
 }
 
+/* --- Entry animation: sections slot in from the left, staggered --- */
 @keyframes slot-in {
     0% {
         opacity: 0;
-        /* Startet etwas weiter rechts oder links */
-        transform: translateX(-20px); 
+        transform: translateX(-20px);
     }
     100% {
         opacity: 1;
@@ -257,16 +292,31 @@ body.dark .nav-card:hover {
     }
 }
 
-/* Wir wenden das auf die einzelnen Sektionen an */
-.hero-section, 
-.nav-grid, 
+.hero-section,
+.nav-grid,
 .recent-posts {
     opacity: 0;
-    /* Eine sehr "eckige" Bewegungskurve (wenig Bremsen am Ende) */
     animation: slot-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-/* Kaskade (nacheinander) */
 .hero-section { animation-delay: 0.05s; }
 .nav-grid     { animation-delay: 0.15s; }
 .recent-posts { animation-delay: 0.25s; }
+
+/* honor reduced-motion preference; without this override the sections
+   would stay at opacity 0 when animations are disabled */
+@media (prefers-reduced-motion: reduce) {
+    .hero-section,
+    .nav-grid,
+    .recent-posts {
+        animation: none;
+        opacity: 1;
+    }
+
+    .nav-card,
+    .nav-card canvas,
+    .hero-section::before,
+    .hero-section::after {
+        transition: none;
+    }
+}
