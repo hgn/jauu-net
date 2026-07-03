@@ -1,6 +1,6 @@
 ---
 title: New Linux Perf Power Management Analyzer
-description:
+description: "Introduction to the Perf Power Management Analyzer: recording and analyzing timer, governor and wakeup behavior with perf."
 date: 2024-01-13T14:51:27+01:00
 draft: true
 tags:

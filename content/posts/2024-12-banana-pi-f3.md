@@ -1,6 +1,6 @@
 ---
 title: "RISC-V Development Board - Banana Pi F3"
-description: ""
+description: "A technical first look at the Banana Pi F3: octa-core RISC-V with RVV 1.0, cache hierarchy, PCIe and I/O, from a Linux developer's perspective."
 date: 2024-12-28T10:57:20+01:00
 draft: false
 tags: ["linux"]

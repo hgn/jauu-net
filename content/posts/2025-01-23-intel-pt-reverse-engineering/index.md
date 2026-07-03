@@ -1,7 +1,7 @@
 ---
 title: "Reverse Engineering and Control-Flow Analysis with Intel Processor Trace"
 date: 2025-01-23T11:35:09+02:00
-description:
+description: "Using Intel Processor Trace with perf to reconstruct the exact control flow of a binary, applied to reverse engineering."
 draft: false
 tags:
   - perf

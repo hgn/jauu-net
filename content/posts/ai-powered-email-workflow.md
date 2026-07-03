@@ -1,6 +1,6 @@
 ---
-title: "Ai Powered Email Workflow"
-description: ""
+title: "AI-Powered Email Workflow"
+description: "Summarizing high-volume mailing lists like LKML with an LLM fan-out, integrated into an OfflineIMAP, NeoMutt and Notmuch setup."
 date: 2025-09-24T22:34:56+02:00
 draft: false
 tags: ["email", "linux", "notmuch", "chatgpt", "ai", "llm", "mutt", "neomutt"]

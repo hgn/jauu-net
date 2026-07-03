@@ -3,7 +3,7 @@ title: "Migration to Cloudflare & Hugo"
 date: 2023-05-16T15:21:21+02:00
 draft: false
 toc: false
-# description: "Description"
+description: "Why this site moved from Jekyll and Google hosting to Hugo behind Cloudflare."
 editPost:
     URL: "https://github.com/hgn/jauu-net/content"
     Text: "Suggest Changes" # edit text

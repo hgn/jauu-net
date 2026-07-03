@@ -1,6 +1,6 @@
 ---
 title: "A Breath of Fresh Air - From Vim to Neovim"
-description: ""
+description: "After 25 years of plain Vim: which Neovim plugins earned their place in my workflow, and why."
 date: 2024-01-12T08:49:59+01:00
 draft: false
 tags: ["vim", "neovim", "telescope", "dracula" ]
