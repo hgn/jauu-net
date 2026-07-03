@@ -1,4 +1,4 @@
-baseURL: http://jauu.net/
+baseURL: https://jauu.net/
 languageCode: en-us
 title: Just Another Unix User
 theme: 'PaperModHgn'
@@ -33,6 +33,11 @@ menu:
           title: "Talks"
           url: "/talks/"
           weight: 30
+        - identifier: "projects"
+          name: "Projects"
+          title: "Projects"
+          url: "/projects/"
+          weight: 35
 #         - identifier: search
 #           name: Search
 #           url: search/
@@ -56,7 +61,7 @@ params:
     disableThemeToggle: true
     fingerprint: "sha512"
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "" #Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+    description: "Linux kernel internals, network protocols and performance engineering. Technical notes by Hagen Paul Pfeifer."
     author: Hagen Paul Pfeifer
     # author: ["Me", "You"] # multiple authors
     # can also be dark, but auto is browser based
@@ -97,11 +102,10 @@ params:
     assets:
         disableHLJS: false
         customCSS: ["css/custom.css"]
-    #     favicon: "<link / abs url>"
-    #     favicon16x16: "<link / abs url>"
-    #     favicon32x32: "<link / abs url>"
-    #     apple_touch_icon: "<link / abs url>"
-    #     safari_pinned_tab: "<link / abs url>"
+        favicon: "/favicon.ico"
+        favicon16x16: "/favicon-16x16.png"
+        favicon32x32: "/favicon-32x32.png"
+        apple_touch_icon: "/apple-touch-icon.png"
 
     # cover:
     #     hidden: true # hide everywhere but not in structured data
