@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-make server                                      # dev server with drafts and auto-reload
+make preview                                     # dev server with drafts and auto-reload
 make                                             # build to public/
 make check                                       # clean build (removes public/ first)
 make bootstrap                                   # first-time setup: installs Hugo, git submodules

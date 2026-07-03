@@ -1,7 +1,7 @@
 all:
 	hugo
 
-server:
+preview:
 	hugo server --navigateToChanged --buildDrafts
 
 check:
