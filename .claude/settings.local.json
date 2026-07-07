@@ -4,7 +4,23 @@
       "WebFetch(domain:jauu.net)",
       "Skill(update-config)",
       "Bash(mkdir -p ~/.claude/commands)",
-      "Bash(cp /home/pfeifer/src/www/jauu-net/.claude/commands/deai.md ~/.claude/commands/deai.md)"
+      "Bash(cp /home/pfeifer/src/www/jauu-net/.claude/commands/deai.md ~/.claude/commands/deai.md)",
+      "Bash(tmux list-sessions *)",
+      "Bash(gh api *)",
+      "Bash(curl -s 'https://api.github.com/users/hgn/repos?sort=pushed&per_page=100')",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s 'https://api.github.com/repos/hgn/perfume/readme' -H 'Accept: application/vnd.github.raw')",
+      "Bash(make check *)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git push *)",
+      "Bash(git -C /home/pfeifer/src/own/web/jauu-net status --short)",
+      "Bash(git commit -m 'projects: rewrite intro *)",
+      "Bash(hugo --buildDrafts --quiet -d /tmp/claude-1000/-home-pfeifer-src-own-web-jauu-net/e8919286-8593-49fd-95f9-7aa0d918e93f/scratchpad/hugo-test)",
+      "WebSearch",
+      "Read(//home/pfeifer/.claude/skills/matplotlib-style/**)",
+      "Read(//home/pfeifer/.claude/skills/**)",
+      "Read(//home/pfeifer/.claude/**)"
     ]
   }
 }
