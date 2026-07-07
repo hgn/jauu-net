@@ -12,6 +12,8 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 enableGitInfo: true
+ignoreFiles:
+  - 'CLAUDE\.md$'
 
 minify:
     disableXML: true
@@ -64,8 +66,8 @@ params:
     description: "Linux kernel internals, network protocols and performance engineering. Technical notes by Hagen Paul Pfeifer."
     author: Hagen Paul Pfeifer
     # author: ["Me", "You"] # multiple authors
-    # can also be dark, but auto is browser based
-    defaultTheme: auto
+    # always dark, independent of browser preference
+    defaultTheme: dark
     # disableThemeToggle: true
     ShowShareButtons: false
     disableShare: True
