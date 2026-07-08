@@ -287,3 +287,52 @@ default, so the baseline is high without anyone thinking about it.
 The value of looking is that "most" is not "all". Same source can become
 two very different binaries, and the binary in front of you may be missing
 a layer you assumed was there. It only takes a minute to check.
+
+## Running the Module
+
+The six checks come from one command. The `hardening` module of
+[machine-code-analyzer](https://jauu.net) takes a single ELF file and
+prints the whole picture:
+
+```console
+$ ./machine-code-analyzer.py hardening /usr/bin/python3
+
+Hardening Analysis
+==================
+
+Number of analyzed functions: 1540
+
+Load-time mitigations (ELF headers):
+    PIE (position independent):    no - fixed load address
+    NX (non-executable stack):     yes
+    RELRO:                         partial
+    FORTIFY (_chk wrappers):       yes
+
+CET / IBT (-fcf-protection): enabled
+    functions starting with endbr64: 1497 of 1540  [ 97.21% ]
+    note: static functions only called directly need no endbr64
+Stack protector (-fstack-protector):
+    functions loading the canary (%fs:0x28): 4 of 1540  [  0.26% ]
+    note: only functions with stack buffers get a canary,
+    and only analyzed function bodies are scanned - without
+    a .symtab the static functions are invisible
+Retpoline thunks (__x86_indirect_thunk_*): 0
+Speculation barriers (lfence): 0
+
+Functions Without endbr64
+=========================
+
+                                        expm1:     704 byte
+                                          tan:     464 byte
+                                          erf:     368 byte
+                                        asinh:     352 byte
+                                        ...
+```
+
+The load-time block is read from the ELF headers, the CET and stack
+protector numbers from the disassembly. The tail lists the largest
+functions that do not open with `endbr64`. A missing landing pad only
+matters if something reaches the function through a pointer, so it is a
+list to skim, not an alarm; in python3 these are the libm math routines.
+Add `--graph-card` to get the status card as an image, or `--json-out
+FILE` for the same data as JSON.
