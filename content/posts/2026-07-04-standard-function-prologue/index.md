@@ -1,5 +1,5 @@
 ---
-title: "How Functions Begin on a Modern System"
+title: "Dissecting Binaries: How Functions Begin"
 date: 2026-07-04T10:30:00+02:00
 description: "A quarter of every function on my Linux system begins with the same two-and-a-bit instructions, and none of them are the prologue you learned in school. I disassembled all 2,749 binaries to see what a function actually looks like when it starts."
 draft: false
@@ -7,6 +7,9 @@ tags:
   - linux
   - reverse-engineering
   - security
+  - machine-code-analyzer
+series:
+  - Dissecting Binaries with machine-code-analyzer
 categories:
   - Linux
 ShowToc: true
@@ -17,6 +20,8 @@ editPost:
   Text: Suggest Changes
   appendFilePath: true
 ---
+
+*This is one of [Dissecting Binaries with machine-code-analyzer](/tags/machine-code-analyzer/), a series where I point the tool at real binaries and write up what falls out.*
 
 Every text on x86 assembly teaches the same function prologue:
 

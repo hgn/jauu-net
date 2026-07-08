@@ -1,5 +1,5 @@
 ---
-title: "What Is Your Binary Made Of? A Tour of machine-code-analyzer"
+title: "Dissecting Binaries: A Tour of the Analyzer"
 date: 2026-06-14T11:00:00+02:00
 description: "A small tool that disassembles an ELF binary and answers plain questions about it: how big are the functions, which instructions dominate, how much of the code is error handling, which mitigations are compiled in."
 draft: false
@@ -7,6 +7,9 @@ tags:
   - linux
   - reverse-engineering
   - performance
+  - machine-code-analyzer
+series:
+  - Dissecting Binaries with machine-code-analyzer
 categories:
   - Linux
 ShowToc: true
@@ -17,6 +20,8 @@ editPost:
   Text: Suggest Changes
   appendFilePath: true
 ---
+
+*This opens [Dissecting Binaries with machine-code-analyzer](/tags/machine-code-analyzer/), a series where I point the tool at real binaries and write up what falls out.*
 
 I keep asking small questions about binaries and never having a quick way to
 answer them. How big is the average function in this program? How much of it
